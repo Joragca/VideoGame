@@ -2,24 +2,24 @@
 
 #include "Vector2D.h"
 
-class Disparo
+class Enemigo
 {
 	//Variables:
 	Vector2D posicion;
 	Vector2D velocidad;
 
-	float dmgfisico;
-	float dmgquimico;
-
+	float res_fisico;
+	float res_quimico;
+	float hp;
 
 public:
-	//Constructor y destructor
-	Disparo();
-	~Disparo();
 
-	//Metodos
+	//Constructor y destructor
+	Enemigo();
+	~Enemigo();
+
+	//Metodos:
 	void getPos(float xi, float yi);
 	void getVel(float vx, float vy);
-	
 };
 
