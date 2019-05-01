@@ -7,7 +7,7 @@ public: //atributos
 	float x;
 	float y;
 
-public: //mÃ©todos
+public: //métodos
 	Vector2D(float xv = 0.0f, float yv = 0.0f); // (1)
 	virtual ~Vector2D();
 

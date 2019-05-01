@@ -17,3 +17,4 @@ public:
 	void getPos(float xi, float yi);
 	
 };
+

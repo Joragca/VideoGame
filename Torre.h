@@ -1,7 +1,7 @@
 #pragma once
 
-// Esta clase es la base para las dem√°s torres
-//Contendr√° atributos y m√©todos que compartan todas las dem√°s torres
+// Esta clase es la base para las dem·s torres
+//Contendr· atributos y mÈtodos que compartan todas las dem·s torres
 
 
 
