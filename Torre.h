@@ -21,7 +21,7 @@ protected:
 
 public:
 	//Constructor y destructor:
-	//Torre();		//Por defecto
+	Torre();		//Por defecto
 	Torre(float px, float py);	// Para que al construir tengamos que darle la posicion
 
 	~Torre();
@@ -29,5 +29,5 @@ public:
 	//Metodos:
 	void getPos(float xi, float yi);
 	void UpgradeTorre(int oro);
+	
 };
-
