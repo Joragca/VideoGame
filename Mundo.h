@@ -9,10 +9,11 @@
 #include"Torre.h"
 #include"Vector2D.h"
 
+
 class Mundo
 {
 	//Variables:
-	
+
 	//Coordenadas vista
 	float x_ojo;
 	float y_ojo;
@@ -20,11 +21,13 @@ class Mundo
 
 	//Declarar aqui todos los objetos:
 
+	float a = 0, b = 0;
+
 	Torre Torre0;
 
 
 
-	
+
 public:
 	//Constructor y destructor:
 	Mundo();
