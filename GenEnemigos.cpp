@@ -1,4 +1,4 @@
-#include "pch.h"	//Ya no se si el compilador quiere o no esto
+#include "pch.h"
 #include "GenEnemigos.h"
 
 

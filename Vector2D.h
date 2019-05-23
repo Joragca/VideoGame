@@ -1,5 +1,6 @@
+
 #pragma once
-//#include "pch.h"
+
 
 class Vector2D
 {
@@ -19,3 +20,5 @@ public: //métodos
 	float operator *(Vector2D &);	 	// (7) producto escalar
 	Vector2D operator *(float);		// (8) producto por un escalar
 };
+
+

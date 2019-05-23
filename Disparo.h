@@ -1,25 +1,31 @@
 #pragma once
 
 #include "Vector2D.h"
+#include "ObjetoMovil.h"
+#include "Interaccion.h"
 
-class Disparo
+class Disparo: public ObjetoMovil
 {
+
+
+protected:
+
 	//Variables:
-	Vector2D posicion;
-	Vector2D velocidad;
+	//Vector2D posicion;
+	//Vector2D velocidad;
 
 	float dmgfisico;
 	float dmgquimico;
 
 
 public:
+	friend class Interaccion;
+
 	//Constructor y destructor
 	Disparo();
 	~Disparo();
 
-	//Metodos
-	void getPos(float xi, float yi);
-	void getVel(float vx, float vy);
+	//Metodos propios de los disparos:
 	
 };
 

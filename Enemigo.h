@@ -1,12 +1,15 @@
 #pragma once
 
 #include "Vector2D.h"
+#include "ObjetoMovil.h"
 
-class Enemigo
+class Enemigo: public ObjetoMovil
 {
+	friend class Interaccion;
+protected:
 	//Variables:
-	Vector2D posicion;
-	Vector2D velocidad;
+	//Vector2D posicion;
+	//Vector2D velocidad;
 
 	float res_fisico;
 	float res_quimico;
@@ -18,8 +21,7 @@ public:
 	Enemigo();
 	~Enemigo();
 
-	//Metodos:
-	void getPos(float xi, float yi);
-	void getVel(float vx, float vy);
+	//Metodos propios de los enemigos:
+
 };
 
