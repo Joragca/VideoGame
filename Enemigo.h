@@ -1,12 +1,15 @@
 #pragma once
 
 #include "Vector2D.h"
+#include "ObjetoMovil.h"
 
-class Enemigo
+class Enemigo: public ObjetoMovil
 {
+	friend class Interaccion;
+protected:
 	//Variables:
-	Vector2D posicion;
-	Vector2D velocidad;
+	//Vector2D posicion;
+	//Vector2D velocidad;
 
 	float res_fisico;
 	float res_quimico;
@@ -16,10 +19,15 @@ public:
 
 	//Constructor y destructor
 	Enemigo();
-	~Enemigo();
+	virtual ~Enemigo();
 
-	//Metodos:
-	void getPos(float xi, float yi);
-	void getVel(float vx, float vy);
+	//Metodos propios de los enemigos:
+	bool restaHp(float daño);	// Se encarga de restar vida a un enemigo y devolver true si baja de 0
+	
+	//Metodos GET:
+
+	//Metodos SET:
+	void setHp(float hpi);
+
 };
 
