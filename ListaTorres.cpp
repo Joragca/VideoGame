@@ -1,4 +1,4 @@
-#include "pch.h"
+//#include "pch.h"
 #include "ListaTorres.h"
 
 
@@ -36,7 +36,7 @@ bool ListaTorres::agregar(Torre *t)
 }
 
 /*
-void ListaTorres::dibuja()	//NECESITAMOS PRIMERO DEFINIR EL MÉTODO DIBUJA DE LAS TORRES !!!!
+void ListaTorres::dibuja()	//NECESITAMOS PRIMERO DEFINIR EL MÉTODO DIBUJA DE LAS TORRES --->>> RODRI
 {
 	for (int i = 0; i < numero; i++)
 		lista[i]->dibuja();
@@ -73,4 +73,25 @@ void ListaTorres::destruirContenidoLista()
 		delete lista[i];
 	}
 	numero = 0;
+}
+
+Torre *ListaTorres:: operator [](int i)
+{
+	if (i >= numero)
+		i = numero - 1;
+	if (i < 0)
+		i = 0;
+
+	return lista[i];
+}
+
+
+Torre* ListaTorres :: enRango(Enemigo e)
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (Interaccion::enRango(*(lista[i]), e))
+			return lista[i];
+	}
+	return 0; //no hay enemigos en rango
 }

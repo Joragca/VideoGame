@@ -1,16 +1,32 @@
-#include "Vector2D.h"
+#pragma once
+#define MAX_ENEMIGOS 100
+
+#include "Enemigo.h"
+#include "Interaccion.h"
+
+
 class ListaEnemigos
 {
+	friend class ListaDisparos;
 public:
-	//Constructor y destructor
 	ListaEnemigos();
-	~ListaEnemigos();
+	~ListaEnemigos(void);
 
-	//Métodos
+	void mueve(float t);
+	void dibuja();
+
+	bool agregar(Enemigo* e);
+	void eliminar(Enemigo* e);
+	void eliminar(int index);
+	void destruirContenido();
+
+	
+	
+	int getNumero() { return numero; }
+	Enemigo* operator[] (int index);
 
 private:
-	//Variables
-	Vector2D posicion;
-	int cuenta;
+	Enemigo * lista[MAX_ENEMIGOS];
+	int numero;
 };
 

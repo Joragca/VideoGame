@@ -1,18 +1,28 @@
+
+#pragma once
+
+#define MAX_DISPAROS 10
 #include "Disparo.h"
-#define MAX_DISPAROS 200
+#include "Enemigo.h"
+#include "ListaEnemigos.h"
+#include "Interaccion.h"
+
 class ListaDisparos
 {
+	friend class ListaEnemigos;
 public:
 	ListaDisparos();
-	~ListaDisparos();
-	bool agregar(Disparo *d);
-	void dibuja();
+	virtual ~ListaDisparos();
+
+	bool agregar(Disparo* d);
 	void destruirContenido();
-	void eliminar(int index);
-	void eliminar(Disparo *d);
+	void mueve(float t);
+	void dibuja();
+
+	void colision(ListaEnemigos e);
+
 
 private:
-	Disparo *lista[MAX_DISPAROS];
+	Disparo * lista[MAX_DISPAROS];
 	int numero;
 };
-

@@ -1,4 +1,5 @@
-#include "pch.h"
+//#include "pch.h"
+#include"math.h"
 #include "Torre.h"
 
 
@@ -13,7 +14,7 @@ Torre::Torre()
 
 Torre::Torre(float px, float py)	//Al construir una torre debemos darle su posición
 {
-	getPos(px, py);
+	setPos(px, py);
 	nivel = 0;	// Seteamos a 0 el nivel, las torres debemos construirlas al iniciar el mapa a nivel 0 que serían solamente los huecos
 }
 
@@ -22,7 +23,7 @@ Torre::~Torre()
 {
 }
 
-void Torre::getPos(float xi, float yi)
+void Torre::setPos(float xi, float yi)
 {
 	posicion.x = xi;
 	posicion.y = yi;
@@ -42,3 +43,9 @@ void Torre::UpgradeTorre(int oro)	//Deberiamos hacer una función para cada clase
 		// De alguna forma poner un texto en rojo como que no se tiene oro suficiente o algo asi
 	}
 }
+
+float Torre::distancia(Vector2D p1, Vector2D p2)
+{
+	return (float)(sqrt((p2.x - p1.x)*(p2.x - p1.x) + (p2.y - p1.y)*(p2.y - p1.y)));
+}
+
