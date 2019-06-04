@@ -1,4 +1,4 @@
-#include "pch.h"
+//#include "pch.h"
 #include "ListaTorres.h"
 
 
@@ -83,4 +83,15 @@ Torre *ListaTorres:: operator [](int i)
 		i = 0;
 
 	return lista[i];
+}
+
+
+Torre* ListaTorres :: enRango(Enemigo e)
+{
+	for (int i = 0; i < numero; i++)
+	{
+		if (Interaccion::enRango(*(lista[i]), e))
+			return lista[i];
+	}
+	return 0; //no hay enemigos en rango
 }

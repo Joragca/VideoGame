@@ -1,13 +1,12 @@
 #pragma once
 
-#include "Vector2D.h"
+
 #include "ObjetoMovil.h"
-#include "Interaccion.h"
+#include "Vector2D.h"
 
 class Disparo: public ObjetoMovil
 {
-
-
+	friend class Interaccion;
 protected:
 
 	//Variables:
@@ -19,13 +18,19 @@ protected:
 
 
 public:
-	friend class Interaccion;
+
 
 	//Constructor y destructor
 	Disparo();
-	~Disparo();
+	virtual ~Disparo();
 
 	//Metodos propios de los disparos:
-	
+	//Metodos GET:
+	float getdmDañoFisico() { return dmgfisico; };
+	float getdmDañoQuimico() { return dmgquimico; };
+
+	//Metodos SET:
+
+
 };
 

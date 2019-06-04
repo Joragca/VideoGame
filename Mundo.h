@@ -9,8 +9,8 @@
 #include"Torre.h"
 #include"Vector2D.h"
 #include"ListaTorres.h"
-//#include "ListaDisparos"
-//#include "ListaEnemigos"
+#include "ListaDisparos.h"
+#include "ListaEnemigos.h"
 
 class Mundo
 {
@@ -26,8 +26,9 @@ class Mundo
 
 	//Declarar aqui todos los objetos:
 	ListaTorres torres;
-	//ListaDisparos disparos;
-	//ListaEnemigos enemigos;
+	ListaDisparos disparos;
+	ListaEnemigos enemigos;
+	Enemigo enemigo;
 
 public:
 	//Constructor y destructor:
@@ -44,5 +45,5 @@ public:
 	bool getImpacto() { return impacto; };
 	int getNumTorres() { return torres.getNumero(); };
 	bool cargarMapa();
+	void funcionLoopPrueba(); // Cambiar por la funcion loop de verdad cuando este 
 };
-

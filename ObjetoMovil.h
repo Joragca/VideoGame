@@ -1,16 +1,16 @@
+//Reemplazo
+
 #pragma once
 
 #include "Vector2D.h"
-#include "Interaccion.h"
 
 class ObjetoMovil
 {
-
 public:
-	ObjetoMovil(void);
-	virtual ~ObjetoMovil(void);
+	ObjetoMovil();
+	virtual ~ObjetoMovil();
 
-	virtual void mueve(float t);
+	void mueve(float t);
 	Vector2D getPos();
 	void setVel(float vx, float vy);
 	void setVel(Vector2D vel);
